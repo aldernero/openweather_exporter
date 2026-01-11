@@ -1,0 +1,10 @@
+services:
+  openweather_exporter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: openweather_exporter:${TAG:-latest}
+    env_file:
+      - ./.env
+    ports:
+      - "8080:8080"
