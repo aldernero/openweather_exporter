@@ -22,7 +22,7 @@ A Prometheus exporter that queries the OpenWeather API for current weather and a
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/aldernero/openweather_exporter.git
 cd openweather_exporter
 ```
 
@@ -96,8 +96,8 @@ docker build -t openweather_exporter .
 # Using environment variables
 docker run -d \
   -p 8080:8080 \
-  -e LATITUDE=32.27 \
-  -e LONGITUDE=-112.73 \
+  -e LATITUDE=35.54 \
+  -e LONGITUDE=-79.75 \
   -e OPENWEATHER_API_KEY=your_api_key \
   -e UNITS=metric \
   openweather_exporter
